@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User form</title>
+</head>
+<body>
+    <header>
+        <h1>User Form</h1>
+    </header>
+    <hr>
+    <main>
+        <form action="/login" method="post">
+            <label for="name">
+                Name :
+                <input type="text" name="name" id="name" placeholder="eg Aman" required>
+            </label>
+            <br><br>
+            <label for="number">
+                Number :
+                <input type="tel" name="number" id="number" minlength="10" maxlength="10" required >
+            </label>
+            <button>send otp</button>
+            <br><br>
+            <label for="otp">
+                OTP :
+                <input type="tel" name="otp" id="otp" minlength="4" maxlength="4" required >
+            </label>
+            <button>verify</button>
+            <br><br>
+            <label for="mail">
+                Email :
+                <input type="email" id="mail" required placeholder="eg abc@gmail.com">
+            </label>
+            <br><br>
+            <label for="event">
+                Select Event :
+                <select name="activity" id="event">
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Debate">Debate</option>
+                </select>
+            </label>
+            <br><br>
+            <label for="rollno">
+                Roll No. :
+                <input type="text" required id="rollno">
+            </label>
+            <br><br>
+            <label for="pass">
+                School id pass :
+                <input type="password" required id="pass">
+            </label>
+            <br><br>
+            <strong>Select class :</strong>
+                <br><br>
+                <label for="SOET">
+                    SOET
+                    <input type="radio" name="cls" id="SOET">
+                </label>
+                <label for="SBAS">
+                    SBAS
+                    <input type="radio" name="cls" id="SBAS">
+                </label>
+                <br><br>
+                <label for="skills">
+                    Skills :
+                    <textarea name="skls" id="skills" placeholder="write any of your tech skills..." rows="5" ></textarea>
+                </label>
+                <br><br>
+                <strong>Click to submit your response  </strong>
+                <button type="submit">SUBMIT</button>
+        </form>
+    </main>
+</body>
+</html>
