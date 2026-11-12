@@ -16,7 +16,7 @@ header, nav {
     padding: 1rem 5%;
 }
 
-nav {
+nav { 
     display: flex;
     justify-content: center;
     gap: 1.5rem;
