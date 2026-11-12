@@ -1,195 +1,122 @@
-:root {
-    --blue: #0a4aa6;
-    --light-bg: #f4f4f4;
-    --white: #ffffff;
-    --text: #222222;
-}
-
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family:sans-serif;
-    background-color: var(--light-bg);
-    color: var(--text);
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
     line-height: 1.6;
-    text-align: center;
 }
 
-header {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 12px 0 4px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.skip-link {
-    position: absolute;
-    left: -9999px;
-}
-
-.skip-link:focus {
-    position: static;
-    display: block;
-    background: var(--white);
-    padding: 5px;
+section {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 5%;
 }
 
 nav {
-    background-color: var(--blue);
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a4aa6;
+    color: white;
+    padding: 1rem 5%;
 }
 
 nav ul {
-    
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 10px;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
 }
 
 nav a {
-    color: var(--white);
-    font-size: 14px;
+    color: white;
+    text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #cccccc;
-    margin: 0;
+.orange {
+    color: #ff7a59;
 }
 
-main section,
-main > div {
-    padding: 25px 20px;
-}
-
-h2 {
-    font-size: 18px;
-    margin-top: 0;
-}
-
-p {
-    max-width: 650px;
-    margin: 10px auto;
-    font-size: 14px;
-}
-
-#About img {
-    width: 250px;
-    height: 250px;
+.hero img {
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
-    background-color: #c9ddf7;
+    object-fit: cover;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.box {
+    background: #0a4aa6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
 .card {
-    background-color: var(--white);
-    max-width: 450px;
-    margin: 15px auto;
-    padding: 15px;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: 0.3s;
 }
 
-.card ul {
-    padding: 0;
-    margin: 0;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.card a {
-    color: var(--blue);
-}
-
-table {
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 25rem;
     margin: 0 auto;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 450px;
-    background-color: var(--white);
-}
-
-th, td {
-    border: 1px solid var(--blue);
-    padding: 6px 10px;
-    font-size: 14px;
-}
-
-th {
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-tr:not(:first-child) th {
-    background-color: var(--white);
-    color: var(--text);
-    font-weight: normal;
-}
-
-footer {
-    padding: 25px 20px 70px;
-}
-
-footer h2 {
-    margin-bottom: 15px;
-}
-
-footer label {
-    display: block;
-    max-width: 450px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 14px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 6px;
-    margin-top: 4px;
-    border: 1px solid #999999;
-    border-radius: 3px;
-    font-family: inherit;
+    background: white;
+    padding: 1.5rem;
 }
 
 button {
-    background-color: var(--blue);
-    color: var(--white);
+    background: #0a4aa6;
+    color: white;
     border: none;
-    padding: 8px 30px;
-    border-radius: 3px;
-  
+    padding: 0.6rem;
 }
 
-button:hover {
-    background-color: #083a85;
+footer {
+    background: #0a4aa6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
-marquee {
-    margin-top: 20px;
-    color: var(--blue);
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.back-to-top {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 8px 14px;
-    border-radius: 4px;
-    font-size: 13px;
-    
+@media (max-width: 480px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

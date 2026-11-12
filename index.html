@@ -3,117 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    
+    <title>Gautam Singh | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="top">
-        <h1>Gautam Singh</h1>
-    </header>
-    <a class="skip-link" href="#main">Skip to main contents....</a>
+
     <nav>
+        <h3>Gautam Singh</h3>
         <ul>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contacts">Contacts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <hr>
-    <main id="main">
-        <div>
-            <section>
-                <h2>Welcome to my portfolio</h2>
-                <p>Welcome to my profile! I'm a passionate web developer who loves turning ideas into clean, responsive, and user-friendly websites.</p>
-                <p>I work with HTML, CSS, JavaScript, and modern frameworks to build everything from sleek interfaces to dynamic functionality.</p>
-                <p>My focus is on accessibility, performance, and thoughtful design — and I'm always learning and improving with every project.</p>
-                <p>Feel free to explore my web development assignments and see how creativity meets code!</p>
-            </section>
-        </div>
-        <hr>
-        <div>
-            <section id="About">
-                <h2>About me</h2>
-                <img src="images/image.jpeg" alt="profile-pic">
-                <p>Hi, I'm a web development student passionate about building clean and responsive websites.</p>
-                <p>I enjoy working with HTML, CSS, and JavaScript to turn ideas into functional designs.</p>
-                <p>Currently learning full-stack development and always excited to take on new challenges.</p>
-            </section>
-        </div>
-        <hr>
-        <div>
-            <section id="Projects">
-                <h2>Projects</h2>
-                <p>This is the section of the web page which will tell or elaborate my projects upon which I have worked during my HTML journey.</p>
 
-               
-                <div class="card">
-                    <ul>
-                        <li>Portfolio website : It is my portfolio website which will tell about my portfolio.</li>
-                    </ul>
-                    <p>Click <a href="relative links/portfolio.html" target="_blank">here </a>to go to my portfolio web page.</p>
-                </div>
-
-                <div class="card">
-                    <ul>
-                        <li>User Form : It is the form which will take the input from users by using several HTML tags.</li>
-                    </ul>
-                    <p>Click <a href="./relative links/userform.html" target="_blank">here </a> to go to the user form page.</p>
-                </div>
-
-                <div class="card">
-                    <ul>
-                        <li>Useful Videos : This page has some of the videos connected to the absolute links which will redirect you to their respective links.</li>
-                    </ul>
-                    <p>Click <a href="./relative links/video.html" target="_blank">here </a>to go to the video page.</p>
-                </div>
-            </section>
-        </div>
-        <hr>
+    <section class="hero">
         <div>
-            <h2>Technical Skills</h2>
-            <table>
-                <tr>
-                    <th>Skills</th>
-                    <th>Level</th>
-                </tr>
-                <tr>
-                    <th>Html</th>
-                    <td>Advanced</td>
-                </tr>
-                <tr>
-                    <th>CSS</th>
-                    <td>Beginner</td>
-                </tr>
-                <tr>
-                    <th>Java script</th>
-                    <td>Beginner</td>
-                </tr>
-            </table>
+            <h1>Hi, I am</h1>
+            <h1 class="orange">Full Stack Developer</h1>
+            <p>Building modern web applications with clean design.</p>
         </div>
-    </main>
-    <hr>
-    <footer id="Contacts">
+        <img src="images/image.jpeg" alt="Profile picture">
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a web development student who enjoys building clean and responsive websites with HTML, CSS and JavaScript. I'm learning full-stack development and love new challenges.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="grid">
+            <div class="box">HTML<br>Advanced</div>
+            <div class="box">CSS<br>Beginner</div>
+            <div class="box">JavaScript<br>Beginner</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>My portfolio page.</p>
+                <a href="relative links/portfolio.html" target="_blank">View</a>
+            </div>
+            <div class="card">
+                <h3>User Form</h3>
+                <p>A form made with HTML tags.</p>
+                <a href="relative links/userform.html" target="_blank">View</a>
+            </div>
+            <div class="card">
+                <h3>Useful Videos</h3>
+                <p>A page of video links.</p>
+                <a href="relative links/video.html" target="_blank">View</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
         <h2>Contact Me</h2>
-        <label for="name">
-            Name :
-            <input type="text" required id="name" placeholder="eg Manan">
-        </label>
-        <br>
-        <label for="mail">
-            Email :
-            <input type="email" required id="mail">
-        </label>
-        <br>
-        <label for="msg">
-            Message :
-            <textarea name="message" id="msg" placeholder="type your message here" cols="50" rows="3"></textarea>
-        </label>
-        <br>
-        <button type="submit">Send</button>
-        <marquee behavior="" direction="">Thanks for visiting my portfolio</marquee>
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Write your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> 2026 Gautam Singh. All rights reserved.</p>
     </footer>
 
-    <a class="back-to-top" href="#top">↑ Back to Top</a>
 </body>
 </html>
